@@ -15,7 +15,7 @@ export default function Navbar() {
           <a href="/" className="text-xl font-bold ">secrets.cafe</a>
         </div>
         <div className="flex gap-8 font-sans font-semibold text-base">
-          <a href="/home" className="hover:text-[#6C63FF]">Home</a>
+          <a href="/" className="hover:text-[#6C63FF]">Home</a>
           <a href="/discover" className="hover:text-[#6C63FF]">Discover</a>
           <a href="/donate" className="hover:text-[#6C63FF]">Donate</a>
           <a href="/develop" className="hover:text-[#6C63FF]">Develop</a>
