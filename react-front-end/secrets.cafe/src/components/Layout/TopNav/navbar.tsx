@@ -22,6 +22,7 @@ export default function Navbar() {
           <a href="/contribute" className="hover:text-[#6C63FF]">Contribute</a>
         </div>
       </nav>
+      <hr />
     </>
   );
 }
