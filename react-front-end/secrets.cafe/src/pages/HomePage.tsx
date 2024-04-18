@@ -11,7 +11,6 @@ export default function HomePage() {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-            <hr />
             <main className="flex-grow mt-[50px]">
                 <Home />
             </main>
