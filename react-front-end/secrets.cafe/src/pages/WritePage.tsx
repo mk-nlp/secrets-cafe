@@ -6,12 +6,11 @@ export default function HomePage() {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-grow flex flex-col items-center justify-center">
+            <main className="flex-grow mt-[50px]">
                 <Write />
             </main>
-            <footer className="mt-auto">
-                <Footer />
-            </footer>
+            <hr/>
+            <Footer />
         </div>
     )
 }
