@@ -1,8 +1,8 @@
 import browseGuy from "@/assets/browse-page-logo.svg";
 import { Button } from "@/components/ui/button";
+import SearchIcon from '@mui/icons-material/Search';
 
 export default function Browse() {
-
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 content-center p-4">
             <h1 className="text-center text-6xl font-bold mb-1 mr-[250px]">
@@ -20,11 +20,16 @@ export default function Browse() {
                         Get a random one or insert its unique code.
                     </p>
                 </div>
-                <div className="flex flex-col items-center">
-                    <input
-                        className="border-[1px] p-input-code border-[#616161] rounded-base"
-                        placeholder="Secret code"
-                    />
+                <div className="flex flex-col items-center space-y-1">
+                    <div className="relative">
+                        <input
+                            className="border-[1px] p-input-code border-[#616161] rounded-base pr-12"
+                            placeholder="Secret code"
+                        />
+                        <Button size="sm" className="absolute top-1/2 right-1 transform -translate-y-1/2">
+                            <SearchIcon />
+                        </Button>
+                    </div>
                     <div className="flex items-center justify-center">
                         <p>or</p>
                     </div>
