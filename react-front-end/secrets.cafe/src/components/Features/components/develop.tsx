@@ -7,7 +7,7 @@ export default function Develop() {
   }
 
   return (
-    <div className="grid grid-cols-3 items-center justify-center gap-5 mt-7">
+    <div className="grid grid-cols-3 items-center justify-center gap-5 mt-20">
       <div className="col-start-2 flex items-center justify-center">
         <img className=" w-[180px]" src={developMark} alt="heart emoji" />
       </div>
