@@ -5,7 +5,7 @@ export default function Donate() {
         window.open("https://ko-fi.com/secrets_cafe", "_blank");
     }
     return (
-        <div className="grid grid-cols-3 items-center justify-center gap-5 mt-7">
+        <div className="grid grid-cols-3 items-center justify-center gap-5 mt-20">
             <div className="col-start-2 flex items-center justify-center">
                 <img className="w-[180px]" src={HeartEmoji} alt="heart emoji" />
             </div>
