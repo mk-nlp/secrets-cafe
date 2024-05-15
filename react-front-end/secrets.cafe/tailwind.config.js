@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'amatic': ['Amatic SC'],
-      
+
     },
     container: {
       center: true,
@@ -37,6 +37,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      padding: {
+        'input-code': '8px 12px 9px 8px',
       },
     },
   },

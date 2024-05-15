@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="grid grid-col-3 gap-1 content-center">
-      <h1 className="col-start-1 col-end-3 text-center text-[28px] font-bold">
+      <h1 className="col-start-1 col-end-3 text-center text-[28px] font-bold mb-10">
         Ever wanted to vent off about something you cannot share with anyone
         around? <br />If so, this is a place for you!
       </h1>
       <div className="col-start-1 row-start-2 justify-self-center">
-        <img src={people} alt="Secrets Cafe" className="w-[500px] h-[400px]" />
+        <img src={people} alt="Secrets Cafe" className="w-[500px] h-auto" />
       </div>
       <div className="gap-2 col-start-2 flex flex-col justify-center items-center justify-self-start">
         <p className="text-center text-base font-sans font-semibold">

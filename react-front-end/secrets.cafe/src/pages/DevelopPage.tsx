@@ -9,6 +9,7 @@ export default function DevelopPage() {
       <main className="flex-grow">
         <Develop />
       </main>
+      <hr />
       <Footer />
     </div>
   );

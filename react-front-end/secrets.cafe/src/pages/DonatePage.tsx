@@ -9,6 +9,7 @@ export default function DonatePage() {
       <main className="flex-grow">
         <Donate />
       </main>
+      <hr/>
       <Footer />
     </div>
   );
