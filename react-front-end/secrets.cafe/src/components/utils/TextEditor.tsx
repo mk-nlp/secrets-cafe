@@ -1,50 +1,53 @@
 import React, { useState } from 'react';
-import Toolbar from './Toolbar';
+import RichTextEditor, { ToolbarConfig } from 'react-rte';
 
 const TextEditor: React.FC = () => {
-    const [text, setText] = useState('');
-    const [isBold, setIsBold] = useState(false);
-    const [isItalic, setIsItalic] = useState(false);
-    const [isUnderline, setIsUnderline] = useState(false);
-    const [fontSize, setFontSize] = useState(16);
+  const [value, setValue] = useState(RichTextEditor.createEmptyValue());
 
-    const handleBold = () => {
-        setIsBold((prev) => !prev);
-    };
+  const onChange = (value: any) => {
+    setValue(value);
+  };
 
-    const handleItalic = () => {
-        setIsItalic((prev) => !prev);
-    };
+  const toolbarConfig: ToolbarConfig = {
+    display: [
+      "INLINE_STYLE_BUTTONS",
+      "BLOCK_TYPE_BUTTONS",
+      "BLOCK_ALIGNMENT_BUTTONS",
+      "BLOCK_TYPE_DROPDOWN",
+    ],
+    INLINE_STYLE_BUTTONS: [
+      { label: "Bold", style: "BOLD" },
+      { label: "Italic", style: "ITALIC" },
+      { label: "Underline", style: "UNDERLINE" },
+    ],
+    BLOCK_TYPE_BUTTONS: [
+      { label: "UL", style: "unordered-list-item" },
+      { label: "OL", style: "ordered-list-item" },
+    ],
+    BLOCK_ALIGNMENT_BUTTONS: [
+      { label: "Align Left", style: "ALIGN_LEFT" },
+      { label: "Align Center", style: "ALIGN_CENTER" },
+      { label: "Align Right", style: "ALIGN_RIGHT" },
+      { label: "Align Justify", style: "ALIGN_JUSTIFY" },
+    ],
+    BLOCK_TYPE_DROPDOWN: [
+      { label: "Normal", style: "unstyled" },
+      { label: "Heading Large", style: "header-one" },
+      { label: "Heading Medium", style: "header-two" },
+      { label: "Heading Small", style: "header-three" },
+    ],
+  };
 
-    const handleUnderline = () => {
-        setIsUnderline((prev) => !prev);
-    };
-
-    const handleFontSize = (size: number) => {
-        setFontSize(size);
-    };
-
-    return (
-        <div>
-            <Toolbar
-                onBold={handleBold}
-                onItalic={handleItalic}
-                onUnderline={handleUnderline}
-                onFontSize={handleFontSize}
-            />
-            <textarea
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                style={{
-                    fontWeight: isBold ? 'bold' : 'normal',
-                    fontStyle: isItalic ? 'italic' : 'normal',
-                    textDecoration: isUnderline ? 'underline' : 'none',
-                    fontSize: `${fontSize}px`,
-                }}
-                className="flex min-h-[80px] w-full rounded-base border-2 font-bold border-black bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-black/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-            />
-        </div>
-    );
+  return (
+    <div>
+      <RichTextEditor
+        value={value}
+        onChange={onChange}
+        toolbarConfig={toolbarConfig}
+        className="w-full min-h-[400px] min-w-[400px] border border-gray-300 rounded-md p-4 mt-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+  );
 };
 
 export default TextEditor;

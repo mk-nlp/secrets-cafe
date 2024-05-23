@@ -1,17 +1,14 @@
 import TextEditor from "../../utils/TextEditor";
 
 export default function Edit() {
-
   return (
     <>
       <div className="flex flex-col">
-        <main className="flex-grow">
-          <div className="container mx-auto px-4">
-            <div className="mt-8">
+          <div className="container mx-auto px-4 py-8">
+            <div className="bg-white shadow-md rounded-lg p-6">
               <TextEditor />
             </div>
           </div>
-        </main>
       </div>
     </>
   );
